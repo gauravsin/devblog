@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 export default class Header extends Component {
   render() {
+    let blogData = this.props.blogData;
     return (
       <React.Fragment>
       <header id="top">
         <div className="row">
           <div className="header-content twelve columns">
-            <h1 id="logo-text"><a href="index.html" title>Keep It Simple.</a></h1>
-            <p id="intro">Put your awesome slogan here...</p>
+            <h1 id="logo-text"><a href="index.html" title>Dev Blog.</a></h1>
+            <p id="intro"> {blogData.name} - {blogData.role}</p>
           </div>			
         </div>
         <nav id="nav-wrap"> 
